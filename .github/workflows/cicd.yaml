@@ -45,9 +45,7 @@ jobs:
         echo "$PWD/bin" >> $GITHUB_PATH
 
     - name: Run golangci-lint
-      uses: golangci/golangci-lint-action@v6
-      with:
-        version: v1.56.2
+      run: golangci-lint run
   
   push:
     runs-on: ubuntu-latest
